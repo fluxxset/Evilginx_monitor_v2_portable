@@ -1,4 +1,4 @@
-package main
+package Evilginx_monitor_v2_portable
 
 import (
 	"bytes"
