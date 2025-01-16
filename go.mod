@@ -1,4 +1,4 @@
-module github.com/fluxxset/evilginx_monitor
+module github.com/fluxxset/Evilginx_monitor_v2_portable
 
 go 1.23.1
 
